@@ -1,4 +1,4 @@
-package day1
+package day01
 
 import readInput
 import stringListToIntList
@@ -38,12 +38,12 @@ class Day01 {
 }
 
 fun main() {
-    val day01 = Day01()
+    val day = Day01()
 
     val inputAsStringList = readInput("main", "Day01")
     val inputAsIntList = stringListToIntList(inputAsStringList)
 
-    println("Day1 - 1: " + day01.part1(inputAsIntList))
-    println("Day1 - 2: " + day01.part2(inputAsIntList))
+    println("Day01 - 1: " + day.part1(inputAsIntList))
+    println("Day01 - 2: " + day.part2(inputAsIntList))
 }
 
