@@ -1,9 +1,11 @@
 package day01
 
+import AdventOfCodeDailyPuzzle
+import classname
 import readInput
 import stringListToIntList
 
-class Day01 {
+class Day01: AdventOfCodeDailyPuzzle() {
 
     fun part1(input: List<Int>): Int {
         var cnt = 0
@@ -39,11 +41,10 @@ class Day01 {
 
 fun main() {
     val day = Day01()
-
-    val inputAsStringList = readInput("main", "Day01")
+    val inputAsStringList = readInput("main", classname(day))
     val inputAsIntList = stringListToIntList(inputAsStringList)
 
-    println("Day01 - 1: " + day.part1(inputAsIntList))
-    println("Day01 - 2: " + day.part2(inputAsIntList))
+    println(classname(day) + " - 1: " + day.part1(inputAsIntList))
+    println(classname(day) + " - 2: " + day.part2(inputAsIntList))
 }
 

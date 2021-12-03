@@ -1,8 +1,10 @@
 package day02
 
+import AdventOfCodeDailyPuzzle
+import classname
 import readInput
 
-class Day02 {
+class Day02: AdventOfCodeDailyPuzzle() {
 
     fun part1(input: List<String>): Int {
         var hor = 0
@@ -49,10 +51,10 @@ class Day02 {
 }
 
 fun main() {
-    val inputAsStringList = readInput("main", "Day02")
-
     val day = Day02()
-    println("Day02 - 1: " + day.part1(inputAsStringList))
-    println("Day02 - 2: " + day.part2(inputAsStringList))
+    val inputAsStringList = readInput("main", classname(day))
+
+    println(classname(day) + " - 1: " + day.part1(inputAsStringList))
+    println(classname(day) + " - 2: " + day.part2(inputAsStringList))
 }
 

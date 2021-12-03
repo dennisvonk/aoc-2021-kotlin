@@ -16,3 +16,8 @@ fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest
  * transform a List of Strings to a List of Ints.
  */
 fun stringListToIntList(input: List<String>) = input.map { i -> i.toInt() }
+
+/**
+ * returns the class simplename
+ */
+fun classname(c: AdventOfCodeDailyPuzzle) = c::class.simpleName!!

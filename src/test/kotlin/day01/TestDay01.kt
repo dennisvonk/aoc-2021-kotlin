@@ -1,23 +1,24 @@
 package day01
 
+import classname
 import readInput
 import stringListToIntList
 
 class TestDay01 {
     fun testPart1() {
-        // test if implementation meets criteria from the description, like:
-        val inputAsStringList = readInput("test", "Day01_test")
+        val day = Day01()
+        val inputAsStringList = readInput("test", classname(day) + "_test")
         val inputAsIntList = stringListToIntList(inputAsStringList)
-        val day01 = Day01()
-        check(day01.part1(inputAsIntList) == 7)
+
+        check(day.part1(inputAsIntList) == 7)
     }
 
     fun testPart2() {
-        // test if implementation meets criteria from the description, like:
-        val inputAsStringList = readInput("test", "Day01_test")
+        val day = Day01()
+        val inputAsStringList = readInput("test", classname(day) + "_test")
         val inputAsIntList = stringListToIntList(inputAsStringList)
-        val day01 = Day01()
-        check(day01.part2(inputAsIntList) == 5)
+
+        check(day.part2(inputAsIntList) == 5)
     }
 }
 

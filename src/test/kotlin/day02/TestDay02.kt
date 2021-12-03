@@ -1,19 +1,20 @@
 package day02
 
+import classname
 import readInput
 
 class TestDay02 {
     fun testPart1() {
-        // test if implementation meets criteria from the description, like:
-        val inputAsStringList = readInput("test", "Day02_test")
         val day = Day02()
+        val inputAsStringList = readInput("test", classname(day) + "_test")
+
         check(day.part1(inputAsStringList) == 150)
     }
 
     fun testPart2() {
-        // test if implementation meets criteria from the description, like:
-        val inputAsStringList = readInput("test", "Day02_test")
         val day = Day02()
+        val inputAsStringList = readInput("test", classname(day) + "_test")
+
         check(day.part2(inputAsStringList) == 900)
     }
 }
