@@ -19,6 +19,19 @@ fun stringListToIntList(input: List<String>) = input.map { i -> i.toInt() }
 
 fun commaSeparatedListToIntList(input: List<String>) = input[0].split(",").map { i -> i.toInt() }
 
+fun Int.plusTorial(): Int {
+    if (this<=0) return 0
+    if (this==1) return 1
+
+    var total=0
+    for (i in 1..this) {
+        total += i
+    }
+    return total
+}
+
+
+
 /**
  * returns the class simplename
  */
