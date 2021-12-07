@@ -21,14 +21,11 @@ class Day05 : AdventOfCodeDailyPuzzle() {
     }
 
     private fun getScore(): Int {
-        val count = map.count { nrLines -> nrLines >= 2 }
-        println(count)
-        return count
+        return map.count { nrLines -> nrLines >= 2 }
     }
 
     private fun normalize(input: List<String>): MutableMap<Point, Point> {
         val normalizedInput = mutableMapOf<Point, Point>()
-println (input)
         input.forEach { line ->
             run {
                 val pairs = line.split("->")
@@ -39,7 +36,7 @@ println (input)
             }
         }
 
-        println (normalizedInput)
+        println(normalizedInput)
         return normalizedInput
     }
 
@@ -47,14 +44,10 @@ println (input)
 
         input.forEach { (key, value) ->
             run {
-//                val fromX = if (key.x <= value.x) key.x else value.x
-//                val toX = if (key.x == fromX) key.y else value.x
-//                val fromY = if (key.x == fromX) value.x else key.x
-//                val toY = if (key.x == fromX) value.y else key.x
-                var fromX = key.x
-                var fromY = key.y
-                var toX = value.x
-                var toY = value.y
+                val fromX = key.x
+                val fromY = key.y
+                val toX = value.x
+                val toY = value.y
                 print("($fromX,$fromY) -> ($toX,$toY) ")
 
                 if (fromX == toX) { // vertical lines
@@ -74,22 +67,14 @@ println (input)
                     val maxX = max(toX, fromX)
                     val minX = min(toX, fromX)
                     val maxY = max(toY, fromY)
-                    while (if (fromX==maxX) x >= minX else x <= maxX) {
+                    while (if (fromX == maxX) x >= minX else x <= maxX) {
                         map[x + y * width] += 1
-                        x += if (fromX==maxX) -1 else 1
-                        y += if (fromY==maxY) -1 else 1
+                        x += if (fromX == maxX) -1 else 1
+                        y += if (fromY == maxY) -1 else 1
                     }
-                }
-                else {
+                } else {
                     println("skipped")
                 }
-//                map.forEachIndexed { index, nrLines ->
-//                    run {
-//                        if (index % width == 0) println()
-//                        print(nrLines)
-//                    }
-//                }
-//                println()
             }
         }
 

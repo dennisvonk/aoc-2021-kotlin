@@ -17,6 +17,8 @@ fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest
  */
 fun stringListToIntList(input: List<String>) = input.map { i -> i.toInt() }
 
+fun commaSeparatedListToIntList(input: List<String>) = input[0].split(",").map { i -> i.toInt() }
+
 /**
  * returns the class simplename
  */
