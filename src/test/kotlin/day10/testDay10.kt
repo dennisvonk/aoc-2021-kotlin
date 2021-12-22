@@ -14,7 +14,7 @@ class TestDay10 {
         check(day.part1(inputAsStringList) == expectedValue)
     }
 
-    fun testPart2(expectedValue: Int) {
+    fun testPart2(expectedValue: Long) {
         val day = Day10()
         val inputAsStringList = readInput("test", classname(day) + "_test")
 
@@ -25,5 +25,5 @@ class TestDay10 {
 fun main() {
     val test = TestDay10()
     test.testPart1(26397)
-    test.testPart2(0)
+    test.testPart2(288957L)
 }
